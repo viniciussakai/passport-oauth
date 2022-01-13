@@ -1,7 +1,8 @@
 import 'dotenv/config'
 
 export default {
-	APP_PORT: process.env.PORT || 3000,
+	APP_PORT: process.env.PORT || 3333,
+	APP_SESSION_SECRET: process.env.SESSION_SECRET || '',
 
 	MONGO_SERVER: process.env.MONGO_SERVER || '',
 	MONGO_USER: process.env.MONGO_URL || '',
@@ -15,5 +16,7 @@ export default {
 
 	GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID || '',
 	GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET || '',
-	GITHUB_CALLBACK_URL: process.env.GITHUB_CALLBACK_URL || ''
+	GITHUB_CALLBACK_URL: process.env.GITHUB_CALLBACK_URL || '',
+
+	JWT_SECRET: process.env.JWT_SECRET || ''
 }
