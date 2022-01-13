@@ -20,8 +20,6 @@ interface IOauthUser {
 export const userProfile = (profile: IOauthUser) => {
 	const { id, name, emails, photos, provider, displayName, username } = profile
 
-	console.log(profile)
-
 	let firstName
 	let lastName
 	let image

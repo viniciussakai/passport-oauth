@@ -23,7 +23,7 @@ class AuthController {
 
 				await UserOauth.create({
 					user_id: user.id,
-					provider: 'google',
+					provider: req.user.provider,
 					subject: req.user.id
 				})
 			} else {
