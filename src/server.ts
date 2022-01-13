@@ -5,6 +5,7 @@ import mongodb from './database/mongodb'
 import passport from 'passport'
 import session from 'express-session'
 import routes from './routes'
+import config from './config'
 
 class Server {
 	#express: express.Express
@@ -22,9 +23,11 @@ class Server {
 	}
 
 	private middlewares(): void {
+		this.express.use(express.json())
+
 		this.express.use(
 			session({
-				secret: 'slasdfgsgfdggf',
+				secret: config.APP_SESSION_SECRET,
 				resave: false,
 				saveUninitialized: false
 			})
